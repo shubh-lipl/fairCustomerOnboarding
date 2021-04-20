@@ -1,0 +1,65 @@
+html{
+    font-size: 16px;
+}
+body{
+    font-size: 1rem;
+    font-family: 'Nunito', sans-serif;
+}
+
+.text-15{font-size: 15px;}
+.text-20{font-size: 20px;}
+.text-23{font-size: 23px;}
+
+.text-200{font-weight: 200;}
+.text-300{font-weight: 300;}
+.text-400{font-weight: 400;}
+.text-500{font-weight: 500;}
+.text-600{font-weight: 600;}
+.text-700{font-weight: 700;}
+.text-800{font-weight: 800;}
+.text-900{font-weight: 900;}
+
+input,textarea{
+    outline: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.text-roboto{
+    font-family: 'Roboto', sans-serif;
+}
+
+.progress {
+    background: #E9ECEF;
+    height: 8px;
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+    
+    width: 249px;
+    margin: 1rem auto 0;
+}
+
+.bar {
+    background: #31B4E7;
+    height: 100%;
+    position: absolute;
+    width: 20px;
+    transition: all ease 0.25s;
+}
+
+button.next{
+    color: #fff;
+    border-radius: 10px;
+    width: 100%;
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    font-family: 'Nunito', sans-serif;
+    background-color:  #F24E00;
+    height: 52px;
+}
+button.next:disabled{background-color: #F2B091;}
+/* 
+button.next:not(:disabled){
+} */
