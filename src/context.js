@@ -11,18 +11,22 @@ const getLocalStorage = () => {
 }
 
 let initialState = {
- firstName: ''
+ firstName: '',
+ lastName: '',
+ dob: '',
+ isValid1: false
 }
 
 export const AppProvider = ({ children }) => {
  const [state, dispatch] = useReducer(reducer, initialState)
 
- const getName = (name) => {
-    dispatch({ type: 'GET_NAME', payload: {firstName: name} })
+ const getName = ({firstName, lastName,dob}) => {
+  //  console.log({firstName,lastName,dob});
+    dispatch({ type: 'GET_FIRST_FORM', payload: {firstName,lastName,dob} })
    }
 
  const saveOnServer = useCallback(() => {
- console.log('SAve on server>>>>>>>>>>>>>>>>>>>>>>>>>');
+ console.log('_______________________________________SAve on Server_______________________________________');
  }, [state])
 
  useEffect(() => {

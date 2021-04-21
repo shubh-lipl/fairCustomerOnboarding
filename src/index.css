@@ -7,6 +7,8 @@ body{
 }
 
 .text-15{font-size: 15px;}
+.text-16{font-size: 16px;}
+
 .text-20{font-size: 20px;}
 .text-23{font-size: 23px;}
 
@@ -21,8 +23,16 @@ body{
 
 input,textarea{
     outline: 0;
-    padding: 0;
+    padding: 0px 8px;
     font-family: 'Roboto', sans-serif;
+    border: 1px solid #CED4DA;
+    border-radius: 3px;
+    display: block;
+    width: 100%;
+}
+input:focus,textarea:focus{
+    border: 1px solid #80BEFC;
+box-shadow: 1px 0px 5px 1px #BFDFFE;
 }
 
 .text-roboto{
@@ -36,8 +46,8 @@ input,textarea{
     position: relative;
     overflow: hidden;
     
-    width: 249px;
-    margin: 1rem auto 0;
+    width: 75%;
+    margin: 0.3rem auto 0;
 }
 
 .bar {
@@ -60,6 +70,16 @@ button.next{
     height: 52px;
 }
 button.next:disabled{background-color: #F2B091;}
+button.backBtn {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+}
+
+button.backBtn img {
+    max-width: 18px;
+}
 /* 
 button.next:not(:disabled){
 } */

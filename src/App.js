@@ -3,10 +3,12 @@ import './index.css';
 import ProgressBar from './components/ProgressBar'
 import NameDOB from './components/NameDOB'
 import { useGlobalContext } from './context'
+import backbtn from './img/backbutton.png';
+import fairlogo from './img/FairLogo.png';
 
 
 function App() {
-  const { firstName } = useGlobalContext()
+  const { isValid1 } = useGlobalContext()
 
   const [step, setStep] = useState(0)
   const [progress, setProgress] = useState(0)
@@ -35,9 +37,14 @@ function App() {
     <div className="App">
       <div className="container">
 
-        {step === 0 || <button disabled={step === 0} onClick={prev}>prev</button>}
-
+        <div className="text-center mt-3"><img src={fairlogo} alt="fairlogo"/></div>
+        
+        <div className="position-relative">
+        <button className="backBtn p-0 bg-transparent border-0" style={{opacity: step===0 ? 0 : 1}} disabled={step === 0} onClick={prev}>
+          <img src={backbtn} alt="backbutton"/>
+        </button>
         <ProgressBar progress={progress} />
+        </div>
 
         {/* <h1 className="text-23 text-700">{steps[step]}</h1> */}
         <div className="steps">
@@ -52,7 +59,7 @@ function App() {
 
         {/* <NameDOB /> */}
 
-        <button className="text-20 text-40 next" disabled={firstName===''} onClick={next}>Next</button>
+        <button className="text-20 text-40 next mt-4" disabled={!isValid1} onClick={next}>Next</button>
       </div>
     </div>
   );
